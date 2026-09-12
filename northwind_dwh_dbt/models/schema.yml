@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: customer_dim
+    columns:
+      - name: cust_sk
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+
+  - name: product_dim
+    columns:
+      - name: product_sk
+        tests:
+          - unique
+          - not_null
+
+  - name: sales_fact
+    columns:
+      - name: cust_sk
+        tests:
+          - not_null
+          - relationships:
+              to: ref('customer_dim')
+              field: cust_sk
+      - name: product_sk
+        tests:
+          - not_null
+          - relationships:
+              to: ref('product_dim')
+              field: product_sk
+      - name: quantity
+        tests:
+          - not_null
+
+  - name: order_fact
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: cust_sk
+        tests:
+          - relationships:
+              to: ref('customer_dim')
+              field: cust_sk

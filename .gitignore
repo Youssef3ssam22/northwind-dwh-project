@@ -1,0 +1,4 @@
+﻿dbt_env/
+logs/
+northwind_dwh_dbt/target/
+northwind_dwh_dbt/logs/
