@@ -97,9 +97,12 @@ Connected Power BI Desktop directly to `northwind_dwh` via PostgreSQL connector,
 Built two dashboards from scratch:
 
 - **Shipping & Logistics Dashboard** — total freight, average freight by shipper, order count by shipper, unshipped orders (via a custom DAX measure).
+
+  ![Shipping & Logistics Dashboard](docs/dashboards/dashboard_shipping_logistics.png)
+
 - **Products & Inventory Dashboard** — top products by quantity sold, sales by category (bar + pie), discontinued product count, average discount by category.
 
-Screenshots: see `docs/dashboards/`.
+  ![Products & Inventory Dashboard](docs/dashboards/dashboard_products_inventory.png)
 
 ---
 
